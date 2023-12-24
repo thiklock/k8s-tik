@@ -1,13 +1,13 @@
-FROm node:alpine
+FROM node:alpine
 
 WORKDIR /app
 
 EXPOSE 3000
 
-COPY package.json package-lock,json ./
+COPY package.json package-lock.json ./
 
-run npm install
+RUN npm install
 
-copy . ./
+COPY . ./
 
 CMD ["npm", "start"]
